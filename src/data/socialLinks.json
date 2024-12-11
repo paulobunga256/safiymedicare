@@ -1,0 +1,28 @@
+{
+  "socialLinks": [
+    {
+      "id": 1,
+      "platform": "Twitter",
+      "href": "https://twitter.com/safiycare",
+      "icon": "Twitter"
+    },
+    {
+      "id": 2,
+      "platform": "Facebook",
+      "href": "https://facebook.com/safiycare",
+      "icon": "Facebook"
+    },
+    {
+      "id": 3,
+      "platform": "Instagram",
+      "href": "https://instagram.com/safiycare",
+      "icon": "Instagram"
+    },
+    {
+      "id": 4,
+      "platform": "LinkedIn",
+      "href": "https://linkedin.com/company/safiycare",
+      "icon": "Linkedin"
+    }
+  ]
+}

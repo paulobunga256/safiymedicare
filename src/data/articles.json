@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Understanding Seasonal Allergies",
+      "excerpt": "Learn about common triggers and treatment options for seasonal allergies.",
+      "date": "2024-03-15",
+      "image": "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80",
+      "category": "Health Tips",
+      "readTime": "5 min read"
+    },
+    {
+      "id": 2,
+      "title": "Maintaining Heart Health",
+      "excerpt": "Essential tips for keeping your heart healthy through diet and exercise.",
+      "date": "2024-03-10",
+      "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80",
+      "category": "Wellness",
+      "readTime": "4 min read"
+    },
+    {
+      "id": 3,
+      "title": "COVID-19 Updates",
+      "excerpt": "Latest information about COVID-19 vaccines and prevention measures.",
+      "date": "2024-03-05",
+      "image": "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?auto=format&fit=crop&q=80",
+      "category": "News",
+      "readTime": "3 min read"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "id": "general-medicine",
+      "title": "General Medicine",
+      "description": "Comprehensive diagnosis and treatment for common and complex medical conditions.",
+      "icon": "Stethoscope"
+    },
+    {
+      "id": "child-care",
+      "title": "Child Care & Immunization",
+      "description": "Specialized pediatric care and immunization programs to protect your child's health and development.",
+      "icon": "Baby"
+    },
+    {
+      "id": "laboratory",
+      "title": "Laboratory Services",
+      "description": "Fast and accurate diagnostic testing to support effective treatment plans.",
+      "icon": "Microscope"
+    }
+  ]
+}
