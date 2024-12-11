@@ -1,13 +1,15 @@
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { useAppSelector } from '../hooks/useAppSelector';
 
-const socialLinks = [
-  { icon: <Twitter size={20} />, href: 'https://twitter.com/villagecare' },
-  { icon: <Facebook size={20} />, href: 'https://facebook.com/villagecare' },
-  { icon: <Instagram size={20} />, href: 'https://instagram.com/villagecare' },
-  { icon: <Linkedin size={20} />, href: 'https://linkedin.com/company/villagecare' },
-];
+const iconComponents = {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+};
 
 export default function Footer() {
+  const { socialLinks } = useAppSelector((state) => state.socialLinks);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -21,17 +23,20 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex space-x-6">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#666666] hover:text-[#999999] transition-colors duration-200"
-              >
-                {link.icon}
-              </a>
-            ))}
+            {socialLinks.map((link) => {
+              const IconComponent = iconComponents[link.icon as keyof typeof iconComponents];
+              return (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#666666] hover:text-[#999999] transition-colors duration-200"
+                >
+                  <IconComponent size={20} />
+                </a>
+              );
+            })}
           </div>
 
           {/* Address */}

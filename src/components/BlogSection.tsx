@@ -2,35 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const articles = [
-  {
-    id: 1,
-    title: 'Understanding Seasonal Allergies',
-    excerpt: 'Learn about common triggers and treatment options for seasonal allergies.',
-    category: 'Health Tips',
-    readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80',
-  },
-  {
-    id: 2,
-    title: 'Maintaining Heart Health',
-    excerpt: 'Essential tips for keeping your heart healthy through diet and exercise.',
-    category: 'Wellness',
-    readTime: '4 min read',
-    image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80',
-  },
-  {
-    id: 3,
-    title: 'COVID-19 Updates',
-    excerpt: 'Latest information about COVID-19 vaccines and prevention measures.',
-    category: 'News',
-    readTime: '3 min read',
-    image: 'https://images.unsplash.com/photo-1584483766114-2cea6facdf57?auto=format&fit=crop&q=80',
-  },
-];
+import { useAppSelector } from '../hooks/useAppSelector';
 
 export default function BlogSection() {
+  const { articles } = useAppSelector((state) => state.articles);
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (

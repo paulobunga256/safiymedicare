@@ -22,7 +22,7 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-sky-600 text-xl font-bold">VillageCare</span>
+              <span className="text-brand-green-600 text-xl font-bold">VillageCare</span>
             </Link>
           </div>
 
@@ -34,8 +34,8 @@ export default function Navigation() {
                 to={item.path}
                 className={`${
                   location.pathname === item.path
-                    ? 'text-sky-600 border-b-2 border-sky-600'
-                    : 'text-gray-600 hover:text-sky-600'
+                    ? 'text-brand-green-600 border-b-2 border-brand-green-600'
+                    : 'text-gray-600 hover:text-brand-green-600'
                 } transition-colors duration-200`}
               >
                 {item.label}
@@ -43,7 +43,7 @@ export default function Navigation() {
             ))}
             <a
               href="tel:+1234567890"
-              className="bg-sky-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-sky-700 transition-colors duration-200"
+              className="bg-brand-green-600 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-brand-green-700 transition-colors duration-200"
             >
               <Phone size={18} />
               <span>Emergency</span>
@@ -54,7 +54,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-sky-600 focus:outline-none"
+              className="text-gray-600 hover:text-brand-green-600 focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -69,9 +69,9 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden"
+            className="md:hidden bg-white"
           >
-            <div className="bg-white px-4 pt-2 pb-4 space-y-4">
+            <div className="px-4 pt-2 pb-4 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -79,8 +79,8 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 ${
                     location.pathname === item.path
-                      ? 'text-sky-600 font-medium'
-                      : 'text-gray-600'
+                      ? 'text-brand-green-600 font-medium'
+                      : 'text-gray-600 hover:text-brand-green-600'
                   }`}
                 >
                   {item.label}
@@ -88,7 +88,7 @@ export default function Navigation() {
               ))}
               <a
                 href="tel:+1234567890"
-                className="block bg-sky-600 text-white px-4 py-2 rounded-full text-center"
+                className="block bg-brand-green-600 text-white px-4 py-2 rounded-full text-center hover:bg-brand-green-700"
               >
                 Emergency Call
               </a>

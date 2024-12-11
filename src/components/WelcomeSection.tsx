@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../hooks/useAppSelector';
 
 export default function WelcomeSection() {
+  const { features } = useAppSelector((state) => state.features);
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
@@ -32,21 +34,17 @@ export default function WelcomeSection() {
               Your Health, Our Priority
             </h2>
             <p className="text-gray-600 mb-6">
-              At Safy Medical Care, we are dedicated to providing high-quality, patient-centered healthcare services to the residents of Kiwanga, Seeta, and the surrounding communities in Mukono District. Our compassionate and skilled medical team ensures every patient receives personalized attention and the best possible care.
+              At Safiy Medical Care, we are dedicated to providing high-quality, patient-centered healthcare services to the residents of Kiwanga, Seeta, and the surrounding communities in Mukono District. Our compassionate and skilled medical team ensures every patient receives personalized attention and the best possible care.
             </p>
             <ul className="space-y-4 mb-8">
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 flex items-center justify-center mt-1">
-                  <div className="w-2 h-2 rounded-full bg-sky-600" />
-                </div>
-                <span className="ml-3 text-gray-600">24/7 Emergency Care Services</span>
-              </li>
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 flex items-center justify-center mt-1">
-                  <div className="w-2 h-2 rounded-full bg-sky-600" />
-                </div>
-                <span className="ml-3 text-gray-600">State-of-the-art Medical Facilities</span>
-              </li>
+              {features.map((feature) => (
+                <li key={feature.id} className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-sky-100 flex items-center justify-center mt-1">
+                    <div className="w-2 h-2 rounded-full bg-sky-600" />
+                  </div>
+                  <span className="ml-3 text-gray-600">{feature.text}</span>
+                </li>
+              ))}
             </ul>
             <Link
               to="/about"

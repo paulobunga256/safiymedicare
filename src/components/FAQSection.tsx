@@ -2,29 +2,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronDown } from 'lucide-react';
-
-const faqs = [
-  {
-    question: 'What insurance plans do you accept?',
-    answer: 'We accept most major insurance plans including Medicare and Medicaid. Please contact our office for a complete list of accepted insurance providers.',
-  },
-  {
-    question: 'How do I schedule an appointment?',
-    answer: 'You can schedule an appointment by calling our office, using our online booking system, or visiting us in person. Emergency cases are always given priority.',
-  },
-  {
-    question: 'What are your operating hours?',
-    answer: 'We are open Monday through Friday from 8:00 AM to 8:00 PM, and Saturday from 9:00 AM to 5:00 PM. Emergency services are available 24/7.',
-  },
-  {
-    question: 'Do you offer telehealth services?',
-    answer: 'Yes, we offer telehealth consultations for eligible patients. Please contact our office to learn more about virtual visit options.',
-  },
-];
+import { useAppSelector } from '../hooks/useAppSelector';
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { faqs } = useAppSelector((state) => state.faqs);
 
   return (
     <section ref={ref} className="py-16 bg-gray-50">
