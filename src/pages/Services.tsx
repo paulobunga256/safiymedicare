@@ -108,7 +108,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-brand-blue-DEFAULT text-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-brand-blue-600 text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Need Medical Assistance?
@@ -120,7 +120,7 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-brand-blue-DEFAULT px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-brand-blue-600 px-8 py-3 rounded-full font-medium hover:bg-gray-600 transition-colors duration-200"
             >
               Schedule Appointment
             </a>

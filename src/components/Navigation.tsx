@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { NavItem } from '../types';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { NavItem } from "../types";
 
 const navItems: NavItem[] = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'News', path: '/news' },
-  { label: 'Contact', path: '/contact' },
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
+  { label: "News", path: "/news" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export default function Navigation() {
@@ -22,7 +22,9 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-brand-green-600 text-xl font-bold">VillageCare</span>
+              <span className="text-brand-green-600 text-xl font-bold">
+                Safiy Medical Care
+              </span>
             </Link>
           </div>
 
@@ -34,8 +36,8 @@ export default function Navigation() {
                 to={item.path}
                 className={`${
                   location.pathname === item.path
-                    ? 'text-brand-green-600 border-b-2 border-brand-green-600'
-                    : 'text-gray-600 hover:text-brand-green-600'
+                    ? "text-brand-green-600 border-b-2 border-brand-green-600"
+                    : "text-gray-600 hover:text-brand-green-600"
                 } transition-colors duration-200`}
               >
                 {item.label}
@@ -79,8 +81,8 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block py-2 ${
                     location.pathname === item.path
-                      ? 'text-brand-green-600 font-medium'
-                      : 'text-gray-600 hover:text-brand-green-600'
+                      ? "text-brand-green-600 font-medium"
+                      : "text-gray-600 hover:text-brand-green-600"
                   }`}
                 >
                   {item.label}
