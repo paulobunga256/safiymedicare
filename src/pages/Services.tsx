@@ -2,12 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
   Stethoscope,
-  Heart,
   HeartPulse,
   Baby,
-  Brain,
-  Activity,
-  Pill,
   Microscope,
   Scissors,
   Users,
@@ -102,7 +98,7 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
               >
-                <div className="text-sky-600 mb-4">{service.icon}</div>
+                <div className="text-brand-green-DEFAULT mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </motion.div>
@@ -112,7 +108,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-sky-600 text-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-brand-blue-DEFAULT text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Need Medical Assistance?
@@ -124,13 +120,13 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-sky-600 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-brand-blue-DEFAULT px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200"
             >
               Schedule Appointment
             </a>
             <a
               href="tel:+1234567890"
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-sky-600 transition-colors duration-200"
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-brand-blue-DEFAULT transition-colors duration-200"
             >
               Call Emergency
             </a>
