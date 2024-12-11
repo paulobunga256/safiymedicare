@@ -16,22 +16,22 @@ import Newsletter from '../components/Newsletter';
 
 const services = [
   {
-    icon: <Stethoscope className="w-8 h-8 text-sky-600" />,
+    icon: <Stethoscope className="w-8 h-8 text-brand-green" />,
     title: 'General Medicine',
     description: 'Comprehensive diagnosis and treatment for common and complex medical conditions.'
   },
   {
-    icon: <Heart className="w-8 h-8 text-sky-600" />,
+    icon: <Heart className="w-8 h-8 text-brand-green" />,
     title: 'Child Care & Immunization',
     description: 'Specialized pediatric care and immunization programs to protect your child’s health and development.'
   },
   {
-    icon: <HeartPulse className="w-8 h-8 text-sky-600" />,
+    icon: <HeartPulse className="w-8 h-8 text-brand-green" />,
     title: 'In- and Out-Patient Care',
     description: 'Comfortable and reliable care for patients needing short-term or extended medical support.'
   },
   {
-    icon: <Baby className="w-8 h-8 text-sky-600" />,
+    icon: <Baby className="w-8 h-8 text-brand-green" />,
     title: 'Laboratory Services',
     description: 'Fast and accurate diagnostic testing to support effective treatment plans.'
   }
@@ -68,7 +68,7 @@ export default function Home() {
       <Hero />
       
       {/* Emergency Banner */}
-      <div className="bg-red-600 text-white py-3 px-4 text-center">
+      <div className="bg-brand-green text-white py-3 px-4 text-center">
         <p className="text-lg">
           Emergency? Call us now: 
           <a href="tel:+1234567890" className="font-bold ml-2 hover:underline">
@@ -90,7 +90,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+          <h2 className="text-3xl font-bold text-brand-green mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Comprehensive healthcare services tailored to meet the needs of our community
           </p>
@@ -127,7 +127,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-brand-green mb-4">
               Patient Testimonials
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -169,7 +169,7 @@ export default function Home() {
       <BlogSection />
 
       {/* CTA Section */}
-      <section className="bg-sky-600 text-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-brand-blue text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Schedule Your Visit?
@@ -179,7 +179,7 @@ export default function Home() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center bg-white text-sky-600 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200"
+            className="inline-flex items-center bg-white text-brand-blue px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200"
           >
             <Calendar className="mr-2" size={20} />
             Schedule Appointment
