@@ -34,21 +34,21 @@ export default {
         }
       },
       backgroundColor: {
-        primary: '#06683B',
-        secondary: '#3F3F87',
-        base: '#F0FCF9'
+        primary: 'brand.green.DEFAULT',
+        secondary: 'brand.blue.DEFAULT',
+        base: 'brand.green.50'
       },
       textColor: {
-        primary: '#06683B',
-        secondary: '#3F3F87'
+        primary: 'brand.green.DEFAULT',
+        secondary: 'brand.blue.DEFAULT'
       },
       ringColor: {
-        primary: '#06683B',
-        secondary: '#3F3F87'
+        primary: 'brand.green.DEFAULT',
+        secondary: 'brand.blue.DEFAULT'
       },
       borderColor: {
-        primary: '#06683B',
-        secondary: '#3F3F87'
+        primary: 'brand.green.DEFAULT',
+        secondary: 'brand.blue.DEFAULT'
       }
     }
   },
