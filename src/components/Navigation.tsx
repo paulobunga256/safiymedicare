@@ -22,8 +22,9 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center"> 
               <img src={safiyLogo} alt="Safiy Medical Care" className="h-20 w-auto" /> {/* Use the new logo */}
+              <span className="text-brand-green-600 text-xl font-bold ml-2">Safiy Medicare</span> {/* Add text to the right of the logo */}
             </Link>
           </div>
 
