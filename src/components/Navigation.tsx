@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavItem } from "../types";
+import safiyLogo from "../assets/safiy_logo.png"; // Import the new logo
 
 const navItems: NavItem[] = [
   { label: "Home", path: "/" },
@@ -19,12 +20,10 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-24">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-brand-green-600 text-xl font-bold">
-                Safiy Medical Care
-              </span>
+              <img src={safiyLogo} alt="Safiy Medical Care" className="h-20 w-auto" /> {/* Use the new logo */}
             </Link>
           </div>
 
